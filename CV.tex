@@ -1,0 +1,339 @@
+% !TEX TS-program = xelatex
+% !TEX encoding = UTF-8
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% SIMPLE-RESUME-CV
+%% <https://github.com/zachscrivena/simple-resume-cv>
+%% This is free and unencumbered software released into the
+%% public domain; see <http://unlicense.org> for details.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% INSTRUCTIONS FOR COMPILING THIS DOCUMENT ("CV.tex")
+%% TeX ---(XeLaTeX)---> PDF:
+%%
+%% Method 1: Use latexmk for fully automated document generation:
+%%   latexmk -xelatex "CV.tex"
+%%   (add the -pvc switch to automatically recompile on changes)
+%%
+%% Method 2: Use XeLaTeX directly:
+%%   xelatex "CV.tex"
+%%   (run multiple times to resolve cross-references if needed)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \documentclass[a4paper,10pt,oneside]{article}
+\documentclass[letterpaper,10pt,oneside]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% TYPESETTING OPTIONS.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\TypesetInNonStopMode}{1}
+\newcommand{\TypesetInDraftMode}{0}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% PREAMBLE.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{CV-Preamble.tex}
+
+% CV Info (to be customized).
+\newcommand{\CVAuthor}{Raghav Toshniwal}
+\newcommand{\CVTitle}{CV}
+\newcommand{\CVNote}{Compiled using {\LaTeX}}
+\newcommand{\CVWebpage}{http://raghav.website}
+
+% PDF settings and properties.
+\hypersetup{
+pdftitle={\CVTitle},
+pdfauthor={\CVAuthor},
+pdfsubject={\CVWebpage},
+pdfcreator={XeLaTeX},
+pdfproducer={},
+pdfkeywords={},
+pdfpagemode={},
+bookmarks=true,
+unicode=true,
+bookmarksopen=true,
+pdfstartview=FitH,
+pdfpagelayout=OneColumn,
+pdfpagemode=UseOutlines,
+hidelinks,
+breaklinks}
+
+% Shorthand.
+\newcommand{\CodeCommand}[1]{\mbox{\textbf{\textbackslash{#1}}}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% ACTUAL DOCUMENT.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%%%%%%%%%%%%%%%
+% TITLE BLOCK %
+%%%%%%%%%%%%%%%
+
+\title{\CVAuthor}
+
+\begin{subtitle}
+{8a, Northumberland Avenue, London WC2N 5BY, United Kingdom}
+\par
+\href{mailto:raghav.toshniwal@gmail.com}
+{raghav.toshniwal@gmail.com}
+\,\SubBulletSymbol\,
++44\,7521\,425-914
+\,\SubBulletSymbol\,
+\href{\CVWebpage}
+{raghav.website}
+\end{subtitle}
+
+\begin{body}
+
+%%%%%%%%%%%%%%%
+%% EDUCATION %%
+%%%%%%%%%%%%%%%
+
+\section
+{Education}
+{Education}
+{PDF:Education}
+
+{\textbf{London School of Economics and Political Science}},
+London, United Kingdom
+
+\GapNoBreak
+\BulletItem
+MSc in
+{Management of Information Systems and Digital Innovation}
+\hfill
+\DatestampYMD{2015}{0}{0} --
+\DatestampYMD{2016}{0}{0}
+\begin{detail}
+\SubBulletItem
+Courses Taken:
+{Data Governance and Privacy, Innovating Organisation IT, Big Data and Social Computing}
+\SubBulletItem
+Research areas:
+Application Programming Interfaces, Privacy by Design
+\end{detail}
+\BigGap
+{\textbf{St Xavier's College}},
+Kolkata, India
+
+\GapNoBreak
+\BulletItem
+BSc in
+{Computer Science (Hons)}
+\hfill
+\DatestampYMD{2012}{0}{0} --
+\DatestampYMD{2015}{0}{0}
+\begin{detail}
+\SubBulletItem
+Thesis:
+{Design of an Intelligent Voice Controlled Home Automation System}
+\SubBulletItem
+Courses Taken:
+Algorithms and Data structures, Compiler Theory, Operating System, Database Management
+\SubBulletItem
+Minor:
+Mathematics and Physics
+\SubBulletItem
+Grade obtained:
+First.
+\end{detail}
+
+
+\BigGap
+{\textbf{St. James' School}},
+Kolkata India
+
+\GapNoBreak
+\BulletItem
+Indian School Certificate
+\hfill
+\DatestampYMD{2012}{0}{0}
+\begin{detail}
+\SubBulletItem
+Overall Aggregate: 94.3\%
+\SubBulletItem
+Computer Science: 97\%
+\end{detail}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% WORK EXPERIENCE %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section
+{Work\newline
+Experience}
+{Other Work Experience}
+{PDF:OtherWorkExperience}
+
+
+{\textbf{Make A Difference}}
+
+
+\GapNoBreak
+\BulletItem
+Mentor \& Teacher
+\hfill
+\DatestampYMD{2012}{0}{0} --
+\DatestampYMD{2015}{0}{0}
+\begin{detail}
+\SubBulletItem
+Taught Mathematics, English and Computer Science to underprivileged children in a shelter home.
+\SubBulletItem
+Mentored a group of 12 Volunteers who were part of an NGO and aided them with their work.
+\SubBulletItem
+Achieved highest city wide volunteer efficiency and lowest volunteer attrition rates.
+\end{detail}
+\BigGap
+
+{\textbf{Blacklanche}}
+
+
+\GapNoBreak
+\BulletItem
+Founder
+\hfill
+\DatestampYMD{2011}{0}{0} --
+\DatestampYMD{2015}{0}{0}
+\begin{detail}
+\SubBulletItem
+Ran a software development startup specializing in web and mobile application development.
+\SubBulletItem
+Received exemplary client feedback for high quality work and attention to detail.
+\end{detail}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Notable Projects %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section
+{Personal\newline
+Projects}
+{Other Work Experience}
+{PDF:OtherWorkExperience}
+
+
+{\textbf{Commeta}}
+\hfill
+\DatestampYMD{2016}{0}{0}
+\begin{detail}
+A browser-extension, built using Flask, allowing users to comment on any website. \newline Users do not have to register with any website or adhere to any moderation. It can even be used with websites that do not allow comments. 
+\end{detail}
+
+\GapNoBreak
+{\textbf{Wiki Bacon}}
+\hfill
+\DatestampYMD{2016}{0}{0}
+\begin{detail}
+A web-service that calculates the shortest path using links from any Wikipedia article to a particular article. \newline It was built to explore the network properties of Wikipedia as a Scale Free Network.
+\newline
+It got featured on the Show page of Hacker News.
+\newline
+\href{http://wikibacon.pancakeapps.com}{Visit: http://wikibacon.pancakeapps.com}
+\end{detail}
+
+\GapNoBreak
+{\textbf{Farket}}
+\hfill
+\DatestampYMD{2015}{0}{0}
+\begin{detail}
+An Internet based farmer's market using text messages for interfacing. It allows farmers to negotiate rates leveraging the ubiquity of the Internet. 
+\newline
+Ideal for rural areas with low Internet penetration.
+\newline
+\href{http://raghav.website/farket}{Read more at: http://raghav.website/farket}
+\end{detail}
+
+\GapNoBreak
+
+
+%%%%%%%%%%%%%%%%%%
+%% PUBLICATIONS %%
+%%%%%%%%%%%%%%%%%%
+
+\section
+{Publications}
+{Publications}
+{PDF:Publications}
+
+\subsection
+{Journals}
+{Journals}
+{PDF:Journals}
+
+\GapNoBreak
+
+{\underline{R.~Toshniwal}, A.~Nath, and K.~Dastidar,
+``Big Data Security Issues and Challenges,''
+\textit{International Journal of Innovative Research in Advanced Engineering },
+vol.~2,
+no.~2,
+\DatestampYM{2015}{02}.}
+
+% Note the use of {\CharSpace} for aligning shorter numbers.
+\Gap
+
+{\underline{R.~Toshniwal} , S.~Chakrabarty, and R.~Beed,
+``Solar-Powered Automated Plant/Crop Watering
+System,''
+\textit{International Journal of Advanced Engineering and Global Technology },
+vol.~3,
+no.~1,
+\DatestampYM{2015}{1}.}
+
+
+%%%%%%%%%%%%%%%%%%%%%
+%% ACADEMIC AWARDS %%
+%%%%%%%%%%%%%%%%%%%%%
+
+\section
+{Awards and \newline Achievements}
+{Awards and \newline Achievements}
+{PDF:AcademicAwards}
+
+\BulletItem
+Summa cum laude,
+St. Xavier's College.
+\hfill
+\DatestampY{2015}
+\BulletItem
+Assistant Secretary,
+Xavier’s Quizzing and Debating and Society
+\hfill
+\DatestampY{2015}
+\BulletItem
+Microsoft Best Cloud Hack,
+Imperial College Hackathon
+\hfill
+\DatestampYM{2016}{02}
+%%%%%%%%%%%%
+%% SKILLS %%
+%%%%%%%%%%%%
+
+\section
+{Skills}
+{Skills}
+{PDF:Skills}
+Java,
+Python,
+C,
+Mobile Application Development (iOS and Android),
+AngularJS,
+MySQL,
+HTML, Javascript, CSS
+{\LaTeX},
+Adobe Photoshop,
+Microsoft Office.
+
+
+\begin{flushright}
+\UseNoteFont%
+[\textit{\CVNote}]%
+\hspace{1.0mm}\null
+\end{flushright}
+\end{body}
+\end{document}
